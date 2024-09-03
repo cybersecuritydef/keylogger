@@ -52,7 +52,7 @@
 #define VK_DOT 190
 #define VK_SLASH 191
 
-void scan_code(CONST CHAR *file);
+VOID scan_code(CONST CHAR *file);
 
 
 #endif // __KEYSCAN_H__
