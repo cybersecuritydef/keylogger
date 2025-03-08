@@ -26,6 +26,7 @@ int main(int argc, char **argv){
     hide(cur_path);
     while(TRUE){
         scan_code(cur_path);
+        Sleep(1);
     }
     return 0;
 }
