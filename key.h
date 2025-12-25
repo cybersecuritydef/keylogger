@@ -1,8 +1,11 @@
-#ifndef __KEYSCAN_H__
+#ifndef __KEY_H__
+#define __KEY_H__
 
-#include <stdio.h>
-#include <conio.h>
+#include <stdbool.h>
 #include <windows.h>
+
+#define RU 0x0419
+#define EN 0x0409
 
 #define VK_0 48
 #define VK_1 49
@@ -52,7 +55,8 @@
 #define VK_DOT 190
 #define VK_SLASH 191
 
-VOID scan_code(CONST CHAR *file);
+bool is_key_ru(void);
+const char* key_value(int code);
+void save_file(const char *filename, const char *key);
 
-
-#endif // __KEYSCAN_H__
+#endif
