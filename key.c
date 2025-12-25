@@ -326,7 +326,7 @@ const char* key_value(const int code){
                 return "4";
         case VK_5 :
             if(GetAsyncKeyState(VK_SHIFT))
-                return "%%";
+                return "%";
             else
                 return "5";
         case VK_6 :
