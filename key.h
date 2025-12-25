@@ -56,7 +56,7 @@
 #define VK_SLASH 191
 
 bool is_key_ru(void);
-const char* key_value(int code);
+const char* key_value(const int code);
 void save_file(const char *filename, const char *key);
 
 #endif
