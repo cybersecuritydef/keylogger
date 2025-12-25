@@ -17,7 +17,7 @@ void save_file(const char *filename, const char *key){
     }
 }
 
-const char* key_value(int code){
+const char* key_value(const int code){
     switch(code){
         case VK_A :
             if(is_key_ru() == true){
