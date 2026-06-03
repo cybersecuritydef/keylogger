@@ -55,6 +55,15 @@
 #define VK_DOT 190
 #define VK_SLASH 191
 
+typedef SHORT (*getStateKey)(int);
+
+typedef struct{
+    const char *en_key;
+    const char *en_key_shift;
+    const char *ru_key;
+    const char *ru_key_shift;
+}keymap;
+
 bool is_key_ru(void);
 const char* key_value(const int code);
 void save_file(const char *filename, const char *key);
