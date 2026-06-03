@@ -8,7 +8,7 @@
 
 #define KEY_LOG "lib32.dll"
 #define LEN_NAME 512
-#define MAX_STATE 255
+#define MAX_STATE 256
 
 int main(int argc, char **argv){
     int i = 0;
