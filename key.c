@@ -486,7 +486,13 @@ const char* key_value(const int code){
             else
                 return ".";
         case VK_SLASH :
-            if(is_shift)
+			if(is_key_ru()){
+                if(is_shift)
+                    return ",";
+                else
+                    return ".";
+            }
+            else if(is_shift)
                 return "?";
             else
                 return "/";
