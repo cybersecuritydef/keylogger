@@ -42,7 +42,13 @@ const char* key_value(const int code){
             else
                 return "b";
         case VK_C :
-            if(GetAsyncKeyState(VK_SHIFT))
+			if(is_key_ru()){
+                if(GetAsyncKeyState(VK_SHIFT))
+                    return "И";
+                else
+                    return "и";
+            }
+            else if(GetAsyncKeyState(VK_SHIFT))
                 return "C";
             else
                 return "c";
