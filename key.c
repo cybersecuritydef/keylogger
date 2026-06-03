@@ -48,10 +48,12 @@ bool is_key_ru(void){
 
 void save_file(const char *filename, const char *key){
     FILE *file = NULL;
-    if((file = fopen(filename, "a")) != NULL){
-        fprintf(file, "%s", key);
-        fclose(file);
-    }
+	if(key != NULL){
+		if((file = fopen(filename, "a")) != NULL){
+	        fprintf(file, "%s", key);
+	        fclose(file);
+	    }	
+	}   
 }
 
 const char* key_value(const int code){
@@ -76,5 +78,5 @@ const char* key_value(const int code){
             else
                 return keys[code].en_key;
 	}
-	return "";
+	return NULL;
 }
