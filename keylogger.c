@@ -11,7 +11,7 @@
 
 int main(int argc, char **argv){
     int i = 0;
-    bool is_pressed = 0;
+    bool is_pressed = false;
     bool state[255] = {false};
     setlocale(LC_ALL, "Russian");
     char path[LEN_NAME] = {'\0'};
