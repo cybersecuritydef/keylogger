@@ -44,9 +44,9 @@ const char* key_value(const int code){
         case VK_C :
 			if(is_key_ru()){
                 if(GetAsyncKeyState(VK_SHIFT))
-                    return "И";
+                    return "С";
                 else
-                    return "и";
+                    return "с";
             }
             else if(GetAsyncKeyState(VK_SHIFT))
                 return "C";
