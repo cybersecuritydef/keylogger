@@ -321,6 +321,8 @@ const char* key_value(const int code){
 			if(is_key_ru()){
 				if(is_shift)
 					return "\"";
+				else
+                	return "2";
 			}				
             else if(is_shift)
                 return "@";
@@ -330,6 +332,8 @@ const char* key_value(const int code){
 			if(is_key_ru()){
 				if(is_shift)
 					return "№";
+				else
+                	return "3";
 			}
             else if(is_shift)
                 return "#";
@@ -339,6 +343,8 @@ const char* key_value(const int code){
 			if(is_key_ru()){
 				if(is_shift)
 					return ";";
+				else
+                	return "4";
 			}
             if(is_shift)
                 return "$";
@@ -353,6 +359,8 @@ const char* key_value(const int code){
 			if(is_key_ru()){
 				if(is_shift)
 					return ":";
+				else
+                	return "6";
 			}
             else if(is_shift)
                 return "^";
