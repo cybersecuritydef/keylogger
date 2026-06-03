@@ -346,7 +346,7 @@ const char* key_value(const int code){
 				else
                 	return "4";
 			}
-            if(is_shift)
+            else if(is_shift)
                 return "$";
             else
                 return "4";
