@@ -22,7 +22,7 @@ const char* key_value(const int code){
 	is_shift = (GetAsyncKeyState(VK_SHIFT) & 0x8000) != 0;
     switch(code){
         case VK_A :
-            if(is_key_ru() == true){
+            if(is_key_ru()){
                 if(is_shift)
                     return "Ф";
                 else
