@@ -370,6 +370,8 @@ const char* key_value(const int code){
             if(is_key_ru()){
 				if(is_shift)
 					return "?";
+				else
+                	return "7";
 			}
             else if(is_shift)
                 return "&";
