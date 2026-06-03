@@ -11,7 +11,8 @@ bool is_key_ru(void){
 
 void save_file(const char *filename, const char *key){
     FILE *file = NULL;
-    if((file = fopen(filename, "a")) != NULL){
+	long size = 0;
+    if((file = fopen(filename, "a")) != NULL){		
         fprintf(file, "%s", key);
         fclose(file);
     }
