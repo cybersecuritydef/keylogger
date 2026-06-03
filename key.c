@@ -318,16 +318,28 @@ const char* key_value(const int code){
             else
                 return "1";
         case VK_2 :
-            if(is_shift)
+			if(is_key_ru()){
+				if(is_shift)
+					return "\"";
+			}				
+            else if(is_shift)
                 return "@";
             else
                 return "2";
         case VK_3 :
-            if(is_shift)
+			if(is_key_ru()){
+				if(is_shift)
+					return "№";
+			}
+            else if(is_shift)
                 return "#";
             else
                 return "3";
         case VK_4 :
+			if(is_key_ru()){
+				if(is_shift)
+					return ";";
+			}
             if(is_shift)
                 return "$";
             else
@@ -338,12 +350,20 @@ const char* key_value(const int code){
             else
                 return "5";
         case VK_6 :
-            if(is_shift)
+			if(is_key_ru()){
+				if(is_shift)
+					return ":";
+			}
+            else if(is_shift)
                 return "^";
             else
                 return "6";
         case VK_7 :
-            if(is_shift)
+            if(is_key_ru()){
+				if(is_shift)
+					return "?";
+			}
+            else if(is_shift)
                 return "&";
             else
                 return "7";
