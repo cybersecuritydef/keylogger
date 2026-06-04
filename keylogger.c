@@ -28,7 +28,8 @@ int main(int argc, char **argv){
             is_pressed = (GetAsyncKeyState(i) & 0x8000) != 0;
             if(is_pressed && state[i] == false)
                 save_file(fullpath, key_value(i));
-            state[i] = is_pressed;
+            if(is_modifier_key(i) == false)
+                state[i] = is_pressed;
         }
         Sleep(1);
     }
