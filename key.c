@@ -36,7 +36,7 @@ static const keymap keys[256] = {
 	[VK_DIVIDE]   = {"/", "/", "/", "/"}, [VK_DECIMAL]  = {".", ".", ".", "."},  
 	[VK_SPACE]    = {" ", " ", " ", " "}, [VK_TAB]      = {"\t", "\t", "\t", "\t"},
 	[VK_RETURN] = {"\n", "\n", "\n", "\n"}, [VK_BACK] = {"<BACK SPACE>", "<BACK SPACE>", "<BACK SPACE>", "<BACK SPACE>"},
-	[VK_CONTROL]  = {"<CTRL>", "<CTRL>", "<CTRL>", "<CTRL>"}, [VK_MENU]     = {"<ALT>", "<ALT>", "<ALT>", "<ALT>"}
+	[VK_CONTROL] = {"<CTRL>", "<CTRL>", "<CTRL>", "<CTRL>"}, [VK_MENU] = {"<ALT>", "<ALT>", "<ALT>", "<ALT>"}
 };
 
 bool is_key_ru(void){
