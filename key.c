@@ -43,7 +43,7 @@ bool is_key_ru(void){
 	HWND h = NULL;
 	HKL keyboard = NULL;
 	if((h = GetForegroundWindow()) != NULL){
-		keyboard = GetKeyboardLayout(GetWindowThreadProcessId(h, 0));
+		keyboard = GetKeyboardLayout(GetWindowThreadProcessId(h, NULL));
 	    if(LOWORD(keyboard) == RU)
 	        return true;
 	}
