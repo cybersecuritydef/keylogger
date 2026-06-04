@@ -64,18 +64,22 @@ const char* key_value(const int code){
 	if(code >= 0 && code <= 255 && code != VK_CAPITAL && keys[code].en_key != NULL){
         is_upper = (GetAsyncKeyState(VK_SHIFT) & 0x8000) != 0;
 		is_caps = (GetKeyState(VK_CAPITAL) & 0x0001) != 0;
-        if (code >= VK_A && code <= VK_Z)            
-            is_upper = is_upper ^ is_caps;
         if(is_key_ru()){
+			if ((code >= VK_A && code <= VK_Z) || code == VK_LBRACKET || code == VK_RBRACKET || code == VK_DOT_COMMA || code == VK_APOSTROPHE || code == VK_COMMA || code == VK_DOT || code == VK_TILDE)
+				is_upper = is_upper ^ is_caps;
             if(is_upper)
                 return keys[code].ru_key_shift;
             else
                 return keys[code].ru_key;
         }
-        else if(is_upper)
+        else{
+			if (code >= VK_A && code <= VK_Z)            
+            	is_upper = is_upper ^ is_caps;
+			if(is_upper)
                 return keys[code].en_key_shift;
             else
                 return keys[code].en_key;
+		} 
 	}
 	return NULL;
 }
