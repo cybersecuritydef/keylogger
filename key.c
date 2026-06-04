@@ -40,9 +40,13 @@ static const keymap keys[256] = {
 };
 
 bool is_key_ru(void){
-    HKL keyboard = GetKeyboardLayout(GetWindowThreadProcessId(GetForegroundWindow(), 0));
-    if(LOWORD(keyboard) == RU)
-        return true;
+	HWND h = NULL;
+	HKL keyboard = NULL;
+	if((h = GetForegroundWindow()) != NULL){
+		keyboard = GetKeyboardLayout(GetWindowThreadProcessId(h, 0));
+	    if(LOWORD(keyboard) == RU)
+	        return true;
+	}
     return false;
 }
 
