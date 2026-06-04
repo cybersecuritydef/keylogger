@@ -36,7 +36,8 @@ static const keymap keys[256] = {
     [VK_DECIMAL]  = {".", ".", ".", "."},   [VK_SPACE]    = {" ", " ", " ", " "},
     [VK_TAB]      = {"\t", "\t", "\t", "\t"}, [VK_RETURN] = {"\n", "\n", "\n", "\n"},
     [VK_BACK]     = {"<BACK SPACE>", "<BACK SPACE>", "<BACK SPACE>", "<BACK SPACE>"},
-	[VK_CONTROL]  = {"<CTRL>", "<CTRL>", "<CTRL>", "<CTRL>"}
+	[VK_CONTROL]  = {"<CTRL>", "<CTRL>", "<CTRL>", "<CTRL>"},
+	[VK_MENU]     = {"<ALT>", "<ALT>", "<ALT>", "<ALT>"}
 };
 
 
